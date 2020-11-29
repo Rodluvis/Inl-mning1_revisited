@@ -21,6 +21,28 @@ namespace Inlämning1_revisited
             Console.WriteLine("====================");
             Console.WriteLine($"{num1} {operand1} {num2} {operand2} {num3}");
             Console.WriteLine("====================");
+
         }
+            static int Add(int num1, int num2)
+            { 
+            int sum = num1 + num2;
+            return sum;
+            }
+        static int Subtract(int num1, int num2)
+        {
+            int sum = num1 - num2;
+            return sum;
+        }
+        static int Multiply(int num1, int num2)
+        {
+            int sum = num1 * num2;
+            return sum;
+        }
+        static int Devision(int num1, int num2)
+        {
+            int sum = num1 / num2;
+            return sum;
+        }
+
     }
 }
