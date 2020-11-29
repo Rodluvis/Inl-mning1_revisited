@@ -30,7 +30,7 @@ namespace Inlämning1_revisited
                 Console.WriteLine("====================");
                 int result = 0;
 
-                if (operand2 == "*" || operand2 == "/")
+                if ((operand2 == "*" || operand2 == "/") && operand1 != "/")
                 {
                     switch (operand2)
                     {
@@ -56,10 +56,6 @@ namespace Inlämning1_revisited
                             Console.WriteLine($"The result of your input is: {result}");
                             break;
 
-                        case "/":
-                            result = Devide(num1, num2);
-                            Console.WriteLine($"The result of your input is: {result}");
-                            break;
                     }
                 }
                 else
@@ -92,6 +88,11 @@ namespace Inlämning1_revisited
                             result = Subtract(num1, num3);
                             Console.WriteLine($"The result of your input is: {result}");
                             break;
+                        case "/":
+                            result = Devide(num1, num3);
+                            Console.WriteLine($"The result of your input is: {result}");
+                            break;
+
                     }
                 }
 
@@ -108,7 +109,7 @@ namespace Inlämning1_revisited
                 {
                     Console.WriteLine("More then a hundred.");
                 }
-                Console.WriteLine("Another try?"+ 
+                Console.WriteLine("Another try?" +
                     "\nPress ENTER to continue." +
                     "\nPress [x] to exit and to print out the sum of all previous calculations.");
                 string exit = Console.ReadLine().ToLower();
